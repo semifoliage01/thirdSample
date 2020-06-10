@@ -1,0 +1,59 @@
+ID: thirdSample
+_schema-version: '2.1'
+parameters:
+  deploy_mode: html5-repo
+version: 0.0.1
+modules:
+  - name: thirdsample-approuter
+    type: approuter.nodejs
+    path: thirdsample-approuter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: thirdSample_html5_repo_runtime
+      - name: uaa_thirdSample
+      - name: dest_thirdSample
+  - name: thirdSample_ui_deployer
+    type: com.sap.html5.application-content
+    path: thirdSample_ui_deployer
+    requires:
+      - name: thirdSample_html5_repo_host
+    build-parameters:
+      requires:
+        - name: SAPUI5
+          artifacts:
+            - './*'
+          target-path: resources/SAPUI5
+  - name: SAPUI5
+    type: html5
+    path: SAPUI5
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build
+      supported-platforms: []
+      build-result: dist
+resources:
+  - name: thirdSample_html5_repo_runtime
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: thirdSample_html5_repo_host
+    parameters:
+      service-plan: app-host
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: uaa_thirdSample
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+  - name: dest_thirdSample
+    parameters:
+      service-plan: lite
+      service: destination
+    type: org.cloudfoundry.managed-service

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZSALESORDER_HUB_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="SalesOrder" sap:content-version="1">
+				<Key><PropertyRef Name="Salesorder"/></Key><Property Name="Salesorder" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Sales Order ID"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Createdbyuser" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Created By"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Creationdatetime" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Created At"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Lastchangedbyuser" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Last Changed By"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Lastchangeddatetime" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Changed At"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Iscreatedbybusinesspartner" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Value" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Islastchangedbybusinesspartner" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Value"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Customer" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Customercontact" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer Contact"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Transactioncurrency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency Code"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/><Property Name="Grossamountintransaccurrency" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false"
+					sap:unit="Transactioncurrency" sap:label="Gross Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/><Property Name="Netamountintransactioncurrency" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false"
+					sap:unit="Transactioncurrency" sap:label="Net Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/><Property Name="Taxamountintransactioncurrency" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false"
+					sap:unit="Transactioncurrency" sap:label="Tax Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/><Property Name="Salesorderlifecyclestatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Lifecycle Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Salesorderbillingstatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false"
+					sap:label="Confirmation Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Salesorderdeliverystatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Ordering Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Salesorderoverallstatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Overall Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Opportunity" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Opportunity ID"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Salesorderpaymentmethod" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Payment Method"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Salesorderpaymentterms" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Payment Terms"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Billtoparty" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Bill-to Party"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Billtopartyrole" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Party Role"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Shiptoparty" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Ship-to Party"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Shiptopartyrole" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Party Role"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZSALESORDER_HUB_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="SalesOrderSet" EntityType="ZSALESORDER_HUB_SRV.SalesOrder" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link rel="self" href="https://10.236.96.65:8001/sap/opu/odata/SAP/ZSALESORDER_HUB_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version" href="https://10.236.96.65:8001/sap/opu/odata/SAP/ZSALESORDER_HUB_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

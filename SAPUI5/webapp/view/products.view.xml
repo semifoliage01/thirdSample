@@ -1,0 +1,17 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sample.sapui5.SAPUI5.controller.products" displayBlock="true">
+	<Shell id="shell">
+		<App id="app" pages="{/SalesOrderSet}">
+			<pages>
+				<Page id="page" title="{i18n&gt;title}">
+					<content>
+					    <List noDataText="Drop list items here" id="list0" headerText="Sales Order _1">
+					        <items>
+					            <StandardListItem type="Navigation" title="{Salesorder}" description="Description text{Createdbyuser}" icon="sap-icon://picture" id="item1" detailPress="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'detailPress':\{'navigation':\{'routeName':'productsDetail'\}\}\}"/>
+					        </items>
+					    </List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
